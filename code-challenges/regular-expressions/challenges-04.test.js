@@ -56,7 +56,6 @@ const isCapitalized = (str) => {
   let capitals = str.match(regex);
   return capitals || [];
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -64,12 +63,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  let result = []
-  arr.forEach(() => {
-    let regex = /^A J/;
-    return arr.match(regex);
-    result.push
+  const returnArr = [];
+  let regex = /^[A-J]/
+  arr.forEach(city => {
+    if(regex.test(city)){
+      returnArr.push(city)
+    }
   });
+  return returnArr
 };
 
 /* ------------------------------------------------------------------------------------------------
