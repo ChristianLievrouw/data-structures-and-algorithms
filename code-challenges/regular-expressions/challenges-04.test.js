@@ -86,7 +86,12 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // Solution code here...
+  const regex = /^October$/-/^Oct$/-/^october$/-/^oct$/;
+  if(input === regex){
+    return 'true';
+  } else {
+    return 'false';
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -195,7 +200,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should match any of the acceptable inputs', () => {
     expect(matchMonth('Oct')).toBeTruthy();
     expect(matchMonth('oct')).toBeTruthy();
