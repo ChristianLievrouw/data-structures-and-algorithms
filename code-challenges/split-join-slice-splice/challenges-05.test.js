@@ -123,14 +123,17 @@ const gruffaloCrumble = {
 };
 
 
-const listFoods = (recipe) => {
+function listFoods(recipe){
   let result = [];
-  for(let i = 0; i < recipe.ingredients.length; i++){
-    recipe.ingredients.slice(1, -1)
-    result.push()
-  }
+  recipe.ingredients.forEach(ingredient => {
+    let str = ingredient.slice(ingredient.indexOf(' ') + 1);
+    let ingr = str.slice(str.indexOf(' ') +1);
+    console.log(str)
+    result.push(ingr);
+  })
+  console.log(result);
   return result;
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
