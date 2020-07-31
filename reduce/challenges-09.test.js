@@ -165,8 +165,12 @@ function getCurrentEvents(request, response){
 
 
 const mapCurrentEvents = () => {
-  currentEvents.news.map(event => new Event(event))
-  return event;
+  const arrayOfEventData = currentEvents.news
+  const eventResults = []
+  arrayOfEventData.forEach(event => {
+  currentEvents.news.push(new Event(event))
+  )};
+  return eventResults;
 }
 
 
